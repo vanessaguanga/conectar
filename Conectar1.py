@@ -1,14 +1,40 @@
+#Vanessa Guanga 
+Viernes 22 de Diciembre del 2023
+
+Objetivo principal del programa:
+
+El objetivo principal del desarrollo de software del juego del ahorcado fue crear una aplicación interactiva que entretenga a los usuarios. 
+Considero que el juego debe proporciona una experiencia divertida y adictiva para sus usuarios.
+Además, el desarrollo del juego del ahorcado me brindo la oportunidad de poner en práctica los conocimientos adquiridos del curso. 
 
 
-print("""BIENVENIDO AL JUEGO DEL AHORCADO EDICION PAISES """)
+Principales Funcionalidades del programa 
 
-print("""REGLAS DEL JUEGO: Introduce letras para adivinar la palabra oculta . 
-                 Tienes 6 intentos, Buena Suerte!
-      
-                                                                                 """)#Mensaje de Bienvenida 
+1.Selección aleatoria : El código utiliza la función random.choice() para seleccionar una palabra aleatoria de la lista de palabras predefinidas.
+
+2.Generación de una cadena de guiones: El código utiliza la multiplicación de cadenas ("_" * len(secreta)) para generar una cadena de guiones 
+que representa las letras ocultas de la palabra seleccionada.
+
+3.Bucle de juego: El código utiliza un bucle while para permitir al jugador adivinar letras hasta que se agoten los intentos o adivinen la palabra.
+
+4.Contador de intentos: El código utiliza una variable intentos para realizar un seguimiento del número de intentos del jugador.
 
 
-import random  #Funcion que permite hacer selecciones aleatorias
+    
+          # Definición de la función
+def saludar():
+    print("¡Hola! Bienvenido al juego del ahorcado.")
+
+# Llamada a la función
+saludar()
+
+# Código existente del juego del ahorcado
+print("""EDICION PAISES """)
+print("""REGLAS DEL JUEGO: Introduce letras para adivinar la palabra oculta .
+                  Tienes 6 intentos, Buena Suerte!
+
+                                                                                 """)
+import random #Funcion que permite hacer selecciones aleatorias 
 
 palabras = ['Ecuador', 'Peru', 'Mexico', 'Chile', 'Guatemala', 'Colombia'] #Variable que contiene las palabras 
 
@@ -18,7 +44,7 @@ intentos = 0 # Empieza el contador
 
 
 letras_adivinadas = [] 
-while intentos < 6: # Inicio de un ciclo 
+while intentos < 6: # Inicio de la condicoon 
 
     letra = input("Ingresa una letra: ") # Variable letra ingresada por el usuario 
     if letra in letras_adivinadas: #Comparacion 1 
@@ -58,3 +84,13 @@ while intentos < 6: # Inicio de un ciclo
             print(" / \\")
             print("Lo siento, no adivinaste la palabra. La palabra era", secreta)
             break
+          
+    opcion = input("¿Deseas pasar al siguiente nivel? (s/n): ") # Preguntar si desea pasar al siguiente nivel
+if opcion.lower() == "s":
+    print("¡Pasando al siguiente nivel!")
+    # Aquí se puede agregar el código para pasar al siguiente nivel
+else:
+    print("Gracias por jugar. ¡Hasta luego!")
+
+
+        
